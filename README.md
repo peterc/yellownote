@@ -45,6 +45,10 @@ The entire app lives in `main.swift`. It bootstraps `NSApplication` manually, cr
 
 See [DESIGN.md](DESIGN.md) for more detail on the drawing approach.
 
+## Inspiration
+
+Inspired by [Nebu](https://wiki.xxiivv.com/site/nebu) by Devine Lu Linvega.
+
 ## License
 
 MIT
