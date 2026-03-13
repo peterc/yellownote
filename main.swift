@@ -303,6 +303,7 @@ class NoteStorage {
     }
 
     func startWatching() {
+        fileWatcher?.cancel()
         let fd = open(noteFilePath, O_EVTONLY)
         guard fd >= 0 else { return }
         let source = DispatchSource.makeFileSystemObjectSource(
@@ -312,6 +313,10 @@ class NoteStorage {
         )
         source.setEventHandler { [weak self] in
             guard let self = self, !self.isSaving else { return }
+            // Re-establish watch after rename (iCloud replaces files atomically)
+            if source.data.contains(.rename) {
+                self.startWatching()
+            }
             guard let contents = try? String(contentsOfFile: noteFilePath, encoding: .utf8),
                   contents != self.lastSavedContents else { return }
             self.lastSavedContents = contents
