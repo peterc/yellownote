@@ -7,7 +7,7 @@
 
 YellowNote is a single-file macOS app: one `main.swift`, a build script, and a font. No Xcode project needed. It draws its own window chrome from scratch using raw AppKit to recreate the look of a System 7 notepad.
 
-Your note is saved automatically to iCloud Drive (`~/Library/Mobile Documents/com~apple~CloudDocs/YellowNote.txt`) and syncs across your Macs. Changes from other devices are picked up in real time via file watching.
+Your note is saved automatically to iCloud Drive (`~/Library/Mobile Documents/com~apple~CloudDocs/YellowNote.txt`) and syncs across your Macs. Changes from other devices are picked up within a couple of seconds.
 
 I built this solely for my own use, so it's not signed, distributed on the App Store, or anything like that. You can build it for yourself and change it however you like.
 
