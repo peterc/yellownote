@@ -1,16 +1,15 @@
-# YellowNote
+# YellowNote - Classic Mac OS-styled sticky note for macOS
 
 ![YellowNote screenshot](screenshot.png)
-
-*A sticky note for macOS, styled after Classic Mac OS.*
-
-Syncs via iCloud Drive so you can run it on multiple machines. Window shades so you can hide it nicely.
-
 ![macOS](https://img.shields.io/badge/macOS-13%2B-black)
+
+*Syncs via iCloud Drive so you can run it on multiple machines. Window shades so you can hide it nicely.*
 
 YellowNote is a single-file macOS app: one `main.swift`, a build script, and a font. No Xcode project needed. It draws its own window chrome from scratch using raw AppKit to recreate the look of a System 7 notepad.
 
 Your note is saved automatically to iCloud Drive (`~/Library/Mobile Documents/com~apple~CloudDocs/YellowNote.txt`) and syncs across your Macs. Changes from other devices are picked up in real time via file watching.
+
+I built this solely for my own use, so it's not signed, distributed on the App Store, or anything like that. You can build it for yourself and change it however you like.
 
 ## Features
 
