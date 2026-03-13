@@ -6,7 +6,7 @@
 
 Syncs via iCloud Drive so you can run it on multiple machines. Window shades so you can hide it nicely.
 
-![macOS](https://img.shields.io/badge/macOS-14%2B-black)
+![macOS](https://img.shields.io/badge/macOS-13%2B-black)
 
 YellowNote is a single-file macOS app: one `main.swift`, a build script, and a font. No Xcode project needed. It draws its own window chrome from scratch using raw AppKit to recreate the look of a System 7 notepad.
 
