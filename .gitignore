@@ -1,0 +1,7 @@
+# Build artifacts
+YellowNote
+YellowNote.app/
+
+# macOS junk
+.DS_Store
+__MACOSX/
