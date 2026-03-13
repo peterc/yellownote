@@ -47,7 +47,7 @@ See [DESIGN.md](DESIGN.md) for more detail on the drawing approach.
 
 ## Credits
 
-Inspired by [Nebu](https://wiki.xxiivv.com/site/nebu) by Devine Lu Linvega. Chicago font by [Planetnana/Robin Casady](http://fontsgeek.com/fonts/ChicagoFLF-Regular) (public domain).
+Inspired by [Nebu](https://wiki.xxiivv.com/site/nebu) by Devine Lu Linvega. ChicagoFLF font by [Planetnana/Robin Casady](https://fontlibrary.org/en/font/chicagoflf) (public domain).
 
 ## License
 
