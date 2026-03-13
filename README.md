@@ -1,4 +1,4 @@
-# YellowNote - Classic Mac OS-styled sticky note for macOS
+# YellowNote - Classic Mac-style sticky note for macOS
 
 ![YellowNote screenshot](screenshot.png)
 ![macOS](https://img.shields.io/badge/macOS-13%2B-black)
