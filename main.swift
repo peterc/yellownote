@@ -269,7 +269,7 @@ let noteFilePath: String = {
 
 class NoteStorage {
     private var saveTimer: DispatchSourceTimer?
-    private var fileWatcher: DispatchSourceFileSystemObject?
+    private var pollTimer: DispatchSourceTimer?
     private var lastSavedContents: String = ""
     private var isSaving = false
     weak var textView: NSTextView?
@@ -303,28 +303,17 @@ class NoteStorage {
     }
 
     func startWatching() {
-        fileWatcher?.cancel()
-        let fd = open(noteFilePath, O_EVTONLY)
-        guard fd >= 0 else { return }
-        let source = DispatchSource.makeFileSystemObjectSource(
-            fileDescriptor: fd,
-            eventMask: [.write, .rename],
-            queue: .main
-        )
-        source.setEventHandler { [weak self] in
+        let timer = DispatchSource.makeTimerSource(queue: .main)
+        timer.schedule(deadline: .now() + 2.0, repeating: 2.0)
+        timer.setEventHandler { [weak self] in
             guard let self = self, !self.isSaving else { return }
-            // Re-establish watch after rename (iCloud replaces files atomically)
-            if source.data.contains(.rename) {
-                self.startWatching()
-            }
             guard let contents = try? String(contentsOfFile: noteFilePath, encoding: .utf8),
                   contents != self.lastSavedContents else { return }
             self.lastSavedContents = contents
             self.textView?.string = contents
         }
-        source.setCancelHandler { close(fd) }
-        source.resume()
-        fileWatcher = source
+        timer.resume()
+        pollTimer = timer
     }
 }
 
