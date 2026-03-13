@@ -45,9 +45,9 @@ The entire app lives in `main.swift`. It bootstraps `NSApplication` manually, cr
 
 See [DESIGN.md](DESIGN.md) for more detail on the drawing approach.
 
-## Inspiration
+## Credits
 
-Inspired by [Nebu](https://wiki.xxiivv.com/site/nebu) by Devine Lu Linvega.
+Inspired by [Nebu](https://wiki.xxiivv.com/site/nebu) by Devine Lu Linvega. Chicago font by [Planetnana/Robin Casady](http://fontsgeek.com/fonts/ChicagoFLF-Regular) (public domain).
 
 ## License
 
